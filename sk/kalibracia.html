@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Kalibrácia hlasitosti </title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            #clearCalibrationBtn:hover {
+                background-color: #c43525 !important; /* Tu zadajte požadovanú farbu */
+            }
+        </style>
+    </head>
+    <body>
+
+        <header><h1>Kalibrácia <span id="mode-title"></span></h1></header>
+
+        <div class="glass-container">
+            <p class="instructions-text"><strong>Inštrukcie pre kalibráciu:</strong></p>
+
+            <ul class="instructions-list">
+                <li>
+                    <strong>Kalibráciu vykonajte v tichej miestnosti</strong>, bez rušivých zvukov. 
+                    Zariadenie (napr. tablet) umiestnite tak, ako budete následne robiť meranie 
+                    s testovanou osobou. Zabezpečte, aby bolo zariadenie vždy v rovnakej 
+                    vzdialenosti a sklone ku kalibračnej/testovanej osobe.
+                </li>
+
+                <li>
+                    <strong>Nastavte hlasitosť vášho zariadenia na predposlednú najvyššiu úroveň hlasitosti</strong>, 
+                    alebo na najvyššiu úroveň hlasitosti, ktorá je ešte pre kalibračnú osobu znesiteľná. 
+                    Pre tento krok využite tlačidlo "Play", ktoré zabezpečí prehrávanie konštantného tónu. 
+                    Počas prehrávania tónu nastavte hlasitosť zariadenia. 
+                    <strong>Počas kalibrácie a ani potom, pri testovaní počutia nemeňte nastavenú hlasitosť!</strong>
+                </li>
+
+                <li>
+                    Realizujte kalibračné nastavenie s prvou "kalibračnou osobou". Kalibračná osoba 
+                    musí byť osoba bez detegovanej poruchy sluchu, ideálne v mladom až strednom veku.
+                    Rovnako vykonajte kalibračné nastavenie s druhou "kalibračnou osobou".
+                </li>
+
+                <li>
+                    Následne môžete pristúpiť k testovaniu osôb pomocou nakalibrovaného systému 
+                    (zariadenia a aplikácie).
+                </li>
+            </ul>
+            <!-- First button -->
+            <button id="playbtn-instruction" class="calibration-btn btn-primary"
+                    data-audio="audio/ElevenLabs_kalibracia_instrukcie.wav"
+                    data-text-play="Prehrať inštrukcie"
+                    data-text-stop="Zastaviť prehrávanie">
+                <span class="icon">▶</span>
+                <span class="btn-text">Prehrať inštrukcie</span>
+            </button>
+        </div>
+
+        <div class="glass-container">
+            <p class="instructions-text"><strong>Kalibračný test sa ukončí:</strong></p>
+            <ul class="instructions-list">
+                <li>
+                    ak prejde cez všetkých 10 kôl
+                </li>
+                <li>
+                    po 3 po sebe idúcich nesprávnych odpovediach
+                </li>
+                <li>
+                    ak vyprší čas 15s po prehraní nahrávky a neklikne sa na žiaden obrázok
+                </li>
+            </ul>
+            <!-- Second button -->
+            <button id="playbtn-ukoncenie" class="calibration-btn btn-primary"
+                    data-audio="audio/ElevenLabs_kalibracia_ukoncenie.mp3"
+                    data-text-play="Prehrať podmienky ukončenia"
+                    data-text-stop="Zastaviť prehrávanie">
+                <span class="icon">▶</span>
+                <span class="btn-text">Prehrať podmienky ukončenia</span>
+            </button>
+        </div>
+
+        <!--Konstantny ton -->
+        <button id="playbtn-konstantny" class="calibration-btn btn-primary" 
+                data-audio="audio/1000Hz.wav"
+                data-loop="true"
+                data-text-play="Spustiť kalibračný tón"
+                data-text-stop="Zastaviť kalibračný tón">
+            <span class="icon">▶</span>
+            <span class="btn-text">Spustiť kalibračný tón</span>
+        </button>
+
+        <!-- Ovládacie tlačidlá -->
+        <div class="buttons-container">
+            <button id="startCalibrationBtn" class="button big-btn green">
+                Spustiť kalibráciu
+            </button>
+
+            <button id="showCalibrationBtn" class="button big-btn green">
+                Zobraziť uložené kalibrácie
+            </button>
+
+            <button id="clearCalibrationBtn" class="button big-btn red">
+                Vymazať všetky kalibrácie
+            </button>
+        </div>
+
+        <div id="outer">
+            <a href="#" id="backToManual">
+                <img src="images/back.png" class="menu-btn" alt="Späť">
+            </a>
+            <a href="#" id="index" onclick="confirmation(); " >
+                <img src="images/home.png" class="menu-btn" alt="Domov">
+            </a>
+        </div>
+
+        <script src="kalibracia.js"></script>
+    </body>
+</html>

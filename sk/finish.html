@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        
+        <header><h1>Gratulujem! Dostali ste sa na koniec testu.</h1></header>
+
+        <div class="finish-robot-wrapper">
+            <div class="finish-robot-section" id="nextbutton3">
+                <a href="#" id="result" onclick="document.location=this.id+'.html';return false;" >
+                    <img src="images/super_robot.gif" alt="robot" class="finish-robot-img" />
+                </a>
+            </div>
+        </div>
+
+        <div id="outer">
+            <a href="#" id="index" onclick="confirmation(); " >
+                <img src="images/home.png" class="menu-btn" alt="Domov">
+            </a>
+
+            <a href="#" id="result" onclick="document.location=this.id+'.html';return false; " >
+                <img src="images/forward.png" class="menu-btn" alt="Ďalej">
+            </a>
+        </div>
+
+        <p class="action-message">Hru ukončíte zatvorením prehliadača.</p>        
+        <p class="action-message">Kliknutím na robota zobrazíte celkové vyhodnotenie vášho testu.</p>
+
+        <script src="finish.js" charset="utf-8"></script>
+    </body>
+</html>

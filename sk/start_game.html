@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <header><h1>Kartičky robota Tomáša</h1></header>
+
+        <p id="action-message">Teraz pomôž robotovi Tomášovi priradiť obrázok ku každému slovu, ktoré budeš počuť.</p>
+
+        <div class="start-game" id="level-selection">
+            <img src="images/default.gif" class="start-game-img" alt="Spustiť hru" id="startGameBtn" onclick="startGame()">
+        </div>
+
+        <p id="action-message">Skríningový test sa automaticky ukončí:</p>
+        <p id="action-message">- ak prejde cez všetkých 10 kôl</p>
+        <p id="action-message">- po 3 po sebe idúcich nesprávnych odpovediach</p>
+        <p id="action-message">- ak vyprší čas 15s po prehraní nahrávky a neklikne sa na žiaden obrázok</p>
+        <p id="action-message">(Test spustíš kliknutím na robota)<br /><br /></p>
+
+        <div id="outer">
+            <a href="#" id="backToManual">
+                <img src="images/back.png" class="menu-btn" alt="Späť">
+            </a>
+
+            <a href="#" id="index" onclick="confirmation(); " >
+                <img src="images/home.png" class="menu-btn" alt="Domov">
+            </a>
+        </div>
+
+        <script src="start_game.js"></script>
+    </body>
+</html>

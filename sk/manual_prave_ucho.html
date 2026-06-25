@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <header><h1>Úvodná inštruktáž (Pravé ucho)</h1></header>
+
+        <div class="intro-container glass-container">
+            <p class="intro-text">
+                Pred samotným testovaním sluchu je nevyhnutné vykonať <strong>"kalibráciu"</strong>, <br>
+                v rámci ktorej systém nastaví referenčný prah rozpoznávania reči. <br>
+                Pred pokračovaním sa uistite, že spĺňate nasledovné požiadavky:
+            </p>
+            <ul class="intro-list">
+                <li><strong>Zariadenie</strong> s reproduktorom alebo slúchadlami (napríklad počítač, tablet alebo mobil).</li>
+                <li><strong>Tichá miestnosť</strong> bez rušivých zvukov.</li>
+                <li><strong>Minimálne dve osoby</strong> bez diagnostikovanej poruchy sluchu, ktoré vykonajú kalibračné nastavenie.</li>
+            </ul>
+            <button id="manualbtn" class="calibration-btn btn-primary" type="button">
+                <span class="icon">▶</span>
+                <span class="btn-text">Prehrať inštrukcie</span>
+            </button>
+        </div>
+
+        <div class="buttons-container">
+            <button onclick="goToCalibration()" class="button big-btn green">
+                Kalibrácia
+            </button>
+            <button id="skipCalibrationBtn" onclick="skipCalibration()" class="button big-btn green">
+                Preskočiť kalibráciu a spustiť hru
+            </button>
+        </div>
+
+        <div id="outer">
+            <a href="#" id="vyberucha" onclick="document.location=this.id+'.html';return false; " >
+                <img src="images/back.png" class="menu-btn" alt="Späť">
+            </a>
+            <a href="#" id="index" onclick="confirmation(); " >
+                <img src="images/home.png" class="menu-btn" alt="Domov">
+            </a>
+        </div>
+
+        <script src="manual.js" charset="utf-8"></script>
+    </body>
+</html>

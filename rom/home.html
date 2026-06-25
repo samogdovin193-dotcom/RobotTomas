@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <header><h1>Kartičky robota Tomáša</h1></header>
+
+        <div class="top-controls">
+            <!-- Language switch button – top right corner -->
+            <div class="lang-switch-wrapper">
+                <button id="lang-switch" onclick="confirmLanguageSwitch()">
+                    Prejsť na verziu<br>
+                    pre slovenský jazyk
+                </button>
+            </div>
+
+            <!-- Settings button – top right corner -->
+            <div class="settings-wrapper">
+                <button id="settings-btn" onclick="goToSettings()">
+                    <img src="images/settings.png" alt="Nastavenia">
+                </button>
+            </div>
+        </div>
+
+        <br>
+        <p id="action-message">Aplikácia pre laický skríning počutia.</b>
+        <p id="action-message">(Ak chceš pokračovať, klikni na robota.)</b>
+        
+        <div class="robot-wrapper robot-wrapper--with-text">
+            <div class="robot-section">
+                <a href="#" id="vyberkola" onclick="document.location=this.id+'.html';return false;">
+                    <img src="images/default.gif" alt="robot" class="robot-img"/>
+                </a>
+            </div>
+
+            <div>
+                <p id="action-message" style="color:purple;"><i>
+                    Robot Tomáš     <br>
+                    to je pletko    <br>
+                    horší ako       <br>
+                    Polepetko.      <br>
+                                    <br>
+                    Na kartičkách obrázkových   <br>
+                    pozabúdal čo je na nich...  <br>     
+                                                <br>
+                    Teraz milé detičky          <br>
+                    pomôžte mi                  <br> 
+                    ku slovíčkam                <br>
+                    poukladáť kartičky.         <br> 
+                </i></p>
+            </div>
+        </div>
+
+        <p id="action-message">Volám sa robot Tomáš. Prednedávnom som sa začal učiť tvoj jazyk a stala sa mi nemilá vec. Dlho som si robil zbierku obrázkov a zvukov, ktoré k sebe patria a starostlivo som si ich ukladal.</p>
+        <p id="action-message">Bohužiaľ dnes som si všimol, že môj zoznam niekto poprehadzoval. Bol by som rád, ak by si mi pomohol priradiť nasledujúce obrázky k správnemu zvuku. </p>
+        <p id="text-simple"> <br>
+        "Kartičky robota Tomáša" je jednoduchá webová hra,<br> ktorej cieľom je orientačne otestovať schopnosť
+        dieťaťa počuť a rozpoznať slová v slovenskom jazyku. <br> 
+        Slová sú navrhnuté tak, aby pokrývali celú fonetickú škálu slovenčiny.
+        </p><br>
+       
+       <p id="text-simple"> Táto aplikácia  bola vytvorená na pôde slovenských univerzít <a href="http://www.tuke.sk/wps/portal">TUKE</a> a <a href="https://www.upjs.sk/filozoficka-fakulta/katedra-slovakistiky-slovanskych-filologii-a-komunikacie/">UPJŠ.</a>  </p>
+       <p id="text-simple"> Pre viac informácií kliknite na náš web: <a href="https://nlp.kemt.fei.tuke.sk/audiometry">Audiometry</a> </p>
+       <p id="text-simple"> This application was developed on Slovak universities <a href="http://www.tuke.sk/wps/portal">TUKE</a> a <a href="https://www.upjs.sk/filozoficka-fakulta/katedra-slovakistiky-slovanskych-filologii-a-komunikacie/">UPJŠ.</a>  </p>
+       <p id="text-simple"> For more information click to <a href="https://nlp.kemt.fei.tuke.sk/audiometry">Audiometry</a> </p>
+       
+       <script src="confirm_function.js" charset="utf-8"></script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header><h1>Aplikácia pre rečovú audiometriu</h1></header>
+        <p id="action-message">Nápoveda: Stlačte tlačidlo pre spustenie testu a kliknutím vyberte obrázok prislúchajúci ku prehranému zvuku.</p>   
+
+        <div class="progress-container">
+            <div class="progress-label">
+                Kolo <span id="current-round">1</span> z <span id="total-rounds">10</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <button class="play-btn btn-primary" id="playbtn">
+            <span class="btn-text">Spustiť test</span>
+        </button>
+        
+        <div class="choices" id="choices"></div>
+
+        <script src="game.js" charset="utf-8"></script>
+    </body>
+</html>

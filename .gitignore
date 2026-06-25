@@ -1,0 +1,22 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+
+# Unused legacy files
+config.xml
+
+databaza_hracov.html
+databaza_hracov.pug
+form.pug
+
+# Same unused legacy files inside language folders
+sk/databaza_hracov.html
+sk/databaza_hracov.pug
+sk/form.pug
+
+rom/databaza_hracov.html
+rom/databaza_hracov.pug
+rom/form.pug

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Nastavenia slovenskej verzie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Nastavenia slovenskej verzie</h1>
+    </header>
+
+    <main class="settings-page">
+
+        <!-- Upozornenie -->
+        <section class="settings-card">
+            <h2>Upozornenie</h2>
+            <p class="settings-warning">
+                Nahrávky, ktoré pridávate do testu, musia byť normalizované na rovnakú hlasitosť
+                ako ostatné nahrávky v teste. Ak nahrávky nebudú mať rovnakú hlasitosť,
+                výsledky testu môžu byť nepoužiteľné.
+            </p>
+        </section>
+
+        <!-- Nastavenie hlasitostí -->
+        <section class="settings-card">
+            <h2>Nastavenie hlasitostí jednotlivých kôl</h2>
+            <p class="settings-text">
+                Zadajte hodnoty hlasitosti (min: -60, max: 0) pre jednotlivé kolá testu v dBFS.
+            </p>
+
+            <div class="volume-grid">
+                <label>Úroveň 10 (dBFS)<input type="number" id="level-10" value="0" step="5" min="-60" max="0"></label>
+                <label>Úroveň 9 (dBFS)<input type="number" id="level-9" value="-10" step="5" min="-60" max="0"></label>
+                <label>Úroveň 8 (dBFS)<input type="number" id="level-8" value="-20" step="5" min="-60" max="0"></label>
+                <label>Úroveň 7 (dBFS)<input type="number" id="level-7" value="-30" step="5" min="-60" max="0"></label>
+                <label>Úroveň 6 (dBFS)<input type="number" id="level-6" value="-35" step="5" min="-60" max="0"></label>
+                <label>Úroveň 5 (dBFS)<input type="number" id="level-5" value="-35" step="5" min="-60" max="0"></label>
+                <label>Úroveň 4 (dBFS)<input type="number" id="level-4" value="-40" step="5" min="-60" max="0"></label>
+                <label>Úroveň 3 (dBFS)<input type="number" id="level-3" value="-40" step="5" min="-60" max="0"></label>
+                <label>Úroveň 2 (dBFS)<input type="number" id="level-2" value="-45" step="5" min="-60" max="0"></label>
+                <label>Úroveň 1 (dBFS)<input type="number" id="level-1" value="-45" step="5" min="-60" max="0"></label>
+            </div>
+
+            <div class="settings-buttons">
+                <button id="saveLevelsBtn" class="button green">
+                    Uložiť hlasitosti
+                </button>
+
+                <button id="resetLevelsBtn" class="button">
+                    Predvolené hodnoty
+                </button>
+            </div>
+        </section>
+
+        <!-- Pridanie slova -->
+        <section class="settings-card">
+            <h2>Pridať nové slovo</h2>
+
+            <div class="form-grid">
+                <label>
+                    Názov slova:
+                    <input type="text" id="wordName" placeholder="napr. strom">
+                </label>
+
+                <label>
+                    Obrázok:
+                    <input type="file" id="wordImage" accept="image/*">
+                </label>
+
+                <label>
+                    Nahrávka pre reproduktor:
+                    <input type="file" id="audioSpeaker" accept="audio/*">
+                </label>
+
+                <label>
+                    Nahrávka pre ľavé ucho:
+                    <input type="file" id="audioLeft" accept="audio/*">
+                </label>
+
+                <label>
+                    Nahrávka pre pravé ucho:
+                    <input type="file" id="audioRight" accept="audio/*">
+                </label>
+            </div>
+
+            <button id="addWordBtn" class="button green">
+                Pridať slovo
+            </button>
+        </section>
+
+        <!-- Zoznam slov -->
+        <section class="settings-card">
+            <h2>Dostupné slová</h2>
+            <p class="settings-text">
+                Zo zoznamu vyberte presne 10 slov, ktoré budú použité v teste.
+            </p>
+
+            <div class="word-counters-row">
+                <p id="selectedWordsCounter" class="settings-text word-counter">
+                    Vybraných slov: 0 / 10
+                </p>
+
+                <p id="customWordsCounter" class="settings-text word-counter">
+                    Vlastné slová: 0 / 50
+                </p>
+            </div>
+
+            <div id="wordList" class="word-list">
+                <!-- Sem sa neskôr dynamicky načítajú slová -->
+            </div>
+
+            <button id="saveSelectedWordsBtn" class="button green">
+                Uložiť výber 10 slov
+            </button>
+        </section>
+
+        <!-- Navigácia -->
+        <section class="settings-navigation">
+            <button onclick="window.location.href='home.html'" class="button">
+                Späť na domovskú stránku
+            </button>
+        </section>
+
+    </main>
+
+    <script src="settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+  <title>Databáza používateľov aplikácie</title>
+  <h1>Databáza používateľov aplikácie</h1>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    background: url(images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 20px;
+
+  }
+
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+
+  tr:nth-child(even){background-color: #f2f2f2}
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  header >h1 {
+      color: black;
+      font-size: 60px;
+      text-align: center;
+      font-family: Impact, Charcoal, sans-serif;
+      position: relative;
+        top: -30;
+        left: 0;
+  }
+    
+  #outer
+  {
+    width:100%;
+    text-align: center;
+    margin-left: -50px
+
+
+  }
+  .inner
+  {
+    display: inline-block;
+    margin-left: 100px
+
+  }    
+
+    </style>
+
+</head>
+<body>
+    <div class="table-data">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Meno</th>
+            <th>Vek</th>
+            <th>Pohlavie</th>
+            <th>Typ testu</th>
+            <th>Správne odpovede</th>
+            <th>Diagnostika</th>
+            <th>Pristroj</th>
+
+        <!---    <th>Edit</th>
+            <th>Delete</th>  --->
+        </tr>
+
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.name %></td>
+            <td><%=data.age %></td>
+            <td><%=data.sex %></td>
+            <td><%=data.test %></td>
+            <td><%=data.score %></td>
+            <td><%=data.diagnostic%></td>
+            <td><%=data.gadget %></td>
+
+          <!---  <td><a href="/edit/<%=data.id%>">Edit</a></td>
+            <td><a href="/user/<%=data.id%>">Delete</a></td> --->
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+
+
+    </div>
+
+    <div id="outer">
+
+        <div class="inner" id="inner1">
+                <a href="#" id="login" onclick="document.location=this.id+'.html';return false; " >
+                    <img src="images/back.png" alt="" width="100" height="100">
+                </a>
+        </div>
+
+        <div class="inner">
+            <a href="#" id="index" onclick="confirmation(); " >
+                <img src="images/home.png" alt="" width="100" height="100">
+            </a>
+        </div>
+
+
+
+    </div>
+
+     <script src="pribeh_lave_ucho.js" charset="utf-8"></script>
+
+</body>
+</html>

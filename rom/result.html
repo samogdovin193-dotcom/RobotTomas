@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aplikácia pre rečovú audiometriu </title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <header><h1>Vyhodnotenie</h1></header>
+        <p class="text">Upozornenie: Nasledujúce údaje sú orientačné. Ak bola vykonaná kalibrácia a test podľa inštrukcií správne, 
+            a testovací subjekt dosiahol vyšší prah porozumenia/počutia v porovnaní s kalibračnými úrovňami, môže to znamenať, 
+            že je vhodné poradiť sa so svojim lekárom a zvážiť audiologické vyšetrenie testovaného subjektu.</p>
+
+        <br>
+
+        <p class="text" id="demo1"></p>
+        <p class="text" id="demo2"></p>
+
+        <!-- POROVNANIE S PRIEMEROM Z KALIBRÁCIE -->
+        <div id="hearingComparison" style="text-align:center; margin:40px 0;">
+            <!-- Tu sa zobrazí hláška -->
+        </div>
+
+        <!-- Tabuľka s históriou odpovedí -->
+        <table id="historyTable">
+            <thead>
+                <tr>
+                    <th>Úroveň</th>
+                    <th>Správna odpoveď</th>
+                    <th>Vaša odpoveď</th>
+                    <th>Odstupy hlasitosti</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <p class="text percentage-small" id="percentage"></p>
+        <br>
+        
+        <p class="text">Poznámka: Odstupy hlasitosti jednotlivých úrovní,
+             sú realizované len na základe digitálnej hladiny hlasitosti</p>
+
+        <div id="outer">
+            <a href="#" id="index" onclick="confirmation(); " >
+                <img src="images/home.png" class="menu-btn" alt="Domov">
+            </a>
+        </div>
+
+        <script src="result.js" charset="utf-8"></script>
+        <script src="kalibracia.js" charset="utf-8"></script>
+    </body>
+</html>
