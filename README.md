@@ -4,8 +4,6 @@ Original hearing screening and speech audiometry web application built with HTML
 
 This project was created as part of my diploma thesis. It later served as the foundation for a modern React + TypeScript version of the application.
 
-> Modernized migrated version: [Hearing Screening App](https://github.com/samogdovin193-dotcom/hearing-screening-app)
-
 ---
 
 ## 🚀 Features
