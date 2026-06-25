@@ -63,31 +63,7 @@ RobotTomas/
 │   ├── audio_prave_ucho/
 │
 ├── rom/
-│   ├── confirm_function.js
-│   ├── finish.html
-│   ├── finish.js
-│   ├── game.html
-│   ├── game.js
-│   ├── home.html
-│   ├── kalibracia.html
-│   ├── kalibracia.js
-│   ├── manual_lave_ucho.html
-│   ├── manual_prave_ucho.html
-│   ├── manual.html
-│   ├── manual.js
-│   ├── result.html
-│   ├── result.js
-│   ├── settings.html
-│   ├── settings.js
-│   ├── start_game.html
-│   ├── start_game.js
-│   ├── vyberkola.html
-│   ├── vyberucha.html
-│   ├── styles.css
-│   ├── images/
-│   ├── audio/
-│   ├── audio_lave_ucho/
-│   ├── audio_prave_ucho/
+│   └── Same structure as the sk/ folder
 │
 └── README.md
 ```
