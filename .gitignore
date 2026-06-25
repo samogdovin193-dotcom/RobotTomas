@@ -12,6 +12,9 @@ databaza_hracov.html
 databaza_hracov.pug
 form.pug
 
+login.html
+user-list.ejs
+
 # Same unused legacy files inside language folders
 sk/databaza_hracov.html
 sk/databaza_hracov.pug
