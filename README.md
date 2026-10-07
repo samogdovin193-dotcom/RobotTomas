@@ -133,7 +133,7 @@ The later React version was created as a modernization and portfolio improvement
 
 ## 🌍 Live Demo
 
-👉 [Kartičky robota Tomáša]()
+👉 [Kartičky robota Tomáša](https://robot-tomas.vercel.app/sk/home.html)
 
 ---
 
